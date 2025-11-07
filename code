@@ -1,0 +1,9 @@
+library(tidyverse)
+library(tidymodels)
+players <- read_csv("players.csv")
+sessions <- read_csv("sessions.csv")
+joint_dataframes <- inner_join(players, sessions)
+joint_dataframes <- head(joint_dataframes, n = 20)
+joint_dataframes
+num_rows_dataframes <- nrow(joint_dataframes)
+num_rows_dataframes
